@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">See n Rent</string>
+    <string name="title_home">Home</string>
+    <string name="title_user">User</string>
+    <string name="title_myAds">My Ads</string>
+    <string name="title_favorite">Favorites</string>
+</resources>

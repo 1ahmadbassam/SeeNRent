@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.ateamincorporated.rentals.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/home_to_category"
+            app:destination="@id/thirdFragment" />
+        <action
+            android:id="@+id/home_to_detail"
+            app:destination="@id/detailFragment" />
+        <action
+            android:id="@+id/home_to_user"
+            app:destination="@id/navigation_user" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_user"
+        android:name="com.ateamincorporated.rentals.ui.user.UserFragment"
+        android:label="@string/title_user"
+        tools:layout="@layout/fragment_user">
+        <action
+            android:id="@+id/sign_in_from_user_information"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/user_to_updateProfile"
+            app:destination="@id/updateProfileFragment" />
+        <action
+            android:id="@+id/user_to_reAuth"
+            app:destination="@id/reAuthFragment" />
+        <action
+            android:id="@+id/user_to_support"
+            app:destination="@id/supportMessageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.ateamincorporated.rentals.ui.user.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/register_from_login"
+            app:destination="@id/registerFragment" />
+        <action
+            android:id="@+id/return_to_user_after_sign_in"
+            app:destination="@id/navigation_user" />
+        <action
+            android:id="@+id/login_to_reset_password"
+            app:destination="@id/resetPasswordFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.ateamincorporated.rentals.ui.user.RegisterFragment"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register">
+        <action
+            android:id="@+id/return_to_user_after_register"
+            app:destination="@id/navigation_user" />
+    </fragment>
+    <fragment
+        android:id="@+id/thirdFragment"
+        android:name="com.ateamincorporated.rentals.ui.addAsset.ThirdFragment"
+        android:label="ThirdFragment"
+        tools:layout="@layout/fragment_add_asset_third">
+        <action
+            android:id="@+id/category_to_home"
+            app:destination="@id/navigation_home" />
+        <action
+            android:id="@+id/category_to_myAds"
+            app:destination="@id/navigation_myAds" />
+        <action
+            android:id="@+id/third_to_fourth"
+            app:destination="@id/fourthFragment" />
+        <action
+            android:id="@+id/category_to_favorites"
+            app:destination="@id/navigation_favorites" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.ateamincorporated.rentals.ui.home.DetailFragment"
+        android:label="fragment_detail"
+        tools:layout="@layout/fragment_detail">
+        <action
+            android:id="@+id/detail_to_home"
+            app:destination="@id/navigation_home" />
+        <action
+            android:id="@+id/detail_to_myAds"
+            app:destination="@id/navigation_myAds" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_myAds"
+        android:name="com.ateamincorporated.rentals.ui.myAds.MyAdsFragment"
+        android:label="@string/title_myAds"
+        tools:layout="@layout/fragment_my_ads">
+        <action
+            android:id="@+id/myAds_to_category"
+            app:destination="@id/thirdFragment" />
+        <action
+            android:id="@+id/myAds_to_detail"
+            app:destination="@id/detailFragment" />
+        <action
+            android:id="@+id/myAds_to_edit"
+            app:destination="@id/fourthFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/fourthFragment"
+        android:name="com.ateamincorporated.rentals.ui.addAsset.FourthFragment"
+        android:label="fragment_add_asset_fourth"
+        tools:layout="@layout/fragment_add_asset_fourth">
+        <action
+            android:id="@+id/edit_to_myAds"
+            app:destination="@id/navigation_myAds" />
+        <action
+            android:id="@+id/fourth_to_second"
+            app:destination="@id/secondFragment" />
+        <action
+            android:id="@+id/fourth_to_third"
+            app:destination="@id/thirdFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/secondFragment"
+        android:name="com.ateamincorporated.rentals.ui.addAsset.SecondFragment"
+        android:label="SecondFragment"
+        tools:layout="@layout/fragment_add_asset_second">
+        <action
+            android:id="@+id/second_to_fourth"
+            app:destination="@id/fourthFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_favorites"
+        android:name="com.ateamincorporated.rentals.ui.favorites.FavoritesFragment"
+        android:label="FavoritesFragment"
+        tools:layout="@layout/fragment_favorites">
+        <action
+            android:id="@+id/favorites_to_detail"
+            app:destination="@id/detailFragment" />
+        <action
+            android:id="@+id/favorites_to_category"
+            app:destination="@id/thirdFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/resetPasswordFragment"
+        android:name="com.ateamincorporated.rentals.ui.user.ResetPasswordFragment"
+        android:label="fragment_reset_password"
+        tools:layout="@layout/fragment_reset_password">
+        <action
+            android:id="@+id/reset_password_to_login"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateProfileFragment"
+        android:name="com.ateamincorporated.rentals.ui.user.UpdateProfileFragment"
+        android:label="fragment_update_profile"
+        tools:layout="@layout/fragment_update_profile">
+        <action
+            android:id="@+id/updateProfile_to_reAuth"
+            app:destination="@id/reAuthFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/reAuthFragment"
+        android:name="com.ateamincorporated.rentals.ui.user.ReAuthFragment"
+        android:label="ReAuthFragment"
+        tools:layout="@layout/fragment_re_auth">
+        <action
+            android:id="@+id/reAuth_to_user"
+            app:destination="@id/navigation_user" />
+    </fragment>
+    <fragment
+        android:id="@+id/supportMessageFragment"
+        android:name="com.ateamincorporated.rentals.ui.user.SupportMessageFragment"
+        android:label="fragment_support_message"
+        tools:layout="@layout/fragment_support_message">
+        <action
+            android:id="@+id/support_to_user"
+            app:destination="@id/navigation_user" />
+    </fragment>
+</navigation>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/firstFragment">
+
+    <fragment
+        android:id="@+id/firstFragment"
+        android:name="com.ateamincorporated.rentals.ui.addAsset.FirstFragment"
+        android:label="fragment_add_asset_first"
+        tools:layout="@layout/fragment_add_asset_first">
+        <action
+            android:id="@+id/first_to_second"
+            app:destination="@id/secondFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/secondFragment"
+        android:name="com.ateamincorporated.rentals.ui.addAsset.SecondFragment"
+        android:label="SecondFragment"
+        tools:layout="@layout/fragment_add_asset_second">
+        <action
+            android:id="@+id/second_to_third"
+            app:destination="@id/thirdFragment" />
+        <action
+            android:id="@+id/second_to_fourth"
+            app:destination="@id/fourthFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/thirdFragment"
+        android:name="com.ateamincorporated.rentals.ui.addAsset.ThirdFragment"
+        android:label="fragment_third"
+        tools:layout="@layout/fragment_add_asset_third">
+        <action
+            android:id="@+id/third_to_fourth"
+            app:destination="@id/fourthFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/fourthFragment"
+        android:name="com.ateamincorporated.rentals.ui.addAsset.FourthFragment"
+        android:label="fragment_fourth"
+        tools:layout="@layout/fragment_add_asset_fourth">
+        <action
+            android:id="@+id/fourth_to_third"
+            app:destination="@id/thirdFragment" />
+        <action
+            android:id="@+id/fourth_to_second"
+            app:destination="@id/secondFragment" />
+    </fragment>
+</navigation>

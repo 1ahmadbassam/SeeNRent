@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "516415681960",
+    "project_id": "see-n-rent",
+    "storage_bucket": "see-n-rent.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:516415681960:android:5829c4525b09df10a4d99d",
+        "android_client_info": {
+          "package_name": "com.ateamincorporated.rentals"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "516415681960-71evalotoeb211rltepg5rta3jukntvn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBusuEbde6GvqZF7Kmhxv9M3iO6AzAP0Q0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "516415681960-71evalotoeb211rltepg5rta3jukntvn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
